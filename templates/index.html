@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Upload</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h1>Sube tu imagen satelital</h1>
+        </div>
+        <div class="drop-section">
+            <div class="col">
+                <div class="cloud-icon">
+                    <img src="{{url_for('static', filename='icons/cloud.png')}}" alt="cloud">
+                </div>
+                <span>Drag & Drop your files here</span>
+                <span>OR</span>
+                <button class="file-selector">Browse Files</button>
+                <input type="file" class="file-selector-input" name="foto">
+            </div>
+            <div class="col">
+                <div class="drop-here">Drop Here</div>
+            </div>
+        </div>
+        <div class="list-section">
+            <div class="list-title">Uploaded Files</div>
+            <div class="list"></div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <select name="color" id="opcionColor">
+            <option value="0">seleccione un color</option>
+            <option value="Blues">blues</option>
+            <option value="Reds">reds</option>
+            <option value="Greens">greens</option>
+            <option value="Greys">grey</option>
+        </select>
+    </div>
+    
+    <div class="containerImg" id="imgRaster">
+    </div>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
